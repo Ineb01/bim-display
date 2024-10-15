@@ -1,4 +1,5 @@
 from flask import Flask
+import requests
 from dummy import dummy
 
 app = Flask(__name__)
