@@ -31,15 +31,4 @@ spec:
       volumes:
       - name: scripts-volume
         configMap:
-          name: flask-code
-
----
-
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: flask-code
-  namespace: applications
-data:
-  main.py: |
-    print("main started")
+          name: flask-code-auto
