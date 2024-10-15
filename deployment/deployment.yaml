@@ -1,0 +1,25 @@
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: flask
+  name: flask-app
+  namespace: applications
+spec:
+  selector:
+    matchLabels:
+      app: flask
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: flask
+    spec:    
+      restartPolicy: Always
+      containers:
+      - image: ineb01/flask-base:latest
+        imagePullPolicy: IfNotPresent
+        name: flask-base
+        ports:
+        - containerPort: 8080
