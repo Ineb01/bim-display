@@ -5,5 +5,7 @@ configMapGenerator:
   - python/dummy.py
 resources:
   - deployment/deployment.yaml
+  - deployment/service.yaml
+  - deployment/ingress.yaml
 generatorOptions:
   disableNameSuffixHash: true
