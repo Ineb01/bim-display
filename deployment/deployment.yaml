@@ -23,3 +23,23 @@ spec:
         name: flask-base
         ports:
         - containerPort: 8080
+        volumeMounts:
+        - name: scripts-volume
+          mountPath: /app
+        command: ["python"]
+        args: ["main.py"]
+      volumes:
+      - name: scripts-volume
+        configMap:
+          name: flask-code
+
+---
+
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: flask-code
+  namespace: applications
+data:
+  main.py: |
+    print("main started")
