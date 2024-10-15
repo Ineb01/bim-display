@@ -1,10 +1,11 @@
 from flask import Flask
+from dummy import dummy
 
 app = Flask(__name__)
 
-@app.route('/')
-def hello_world():
-    return 'Hello World'
+@app.route('/dummy')
+def dummy_local():
+    return dummy()
 
 if __name__ == '__main__':
 
