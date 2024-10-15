@@ -1,11 +1,9 @@
-
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
     app: flask
   name: flask-app
-  namespace: applications
 spec:
   selector:
     matchLabels:

@@ -4,7 +4,6 @@ metadata:
   labels:
     app: flask-svc
   name: flask-svc
-  namespace: applications
 spec:
   ports:
   - name: "80"
