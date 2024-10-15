@@ -1,7 +1,7 @@
 configMapGenerator:
 - name: flask-code-auto
   files:
-  - python/main.py
+  - python/*.py
 resources:
   - deployment/deployment.yaml
 generatorOptions:
