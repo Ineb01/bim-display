@@ -1,4 +1,4 @@
 configMapGenerator:
 - name: flask-code-auto
   files:
-  - main.py
+  - ../python/main.py
