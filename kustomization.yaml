@@ -4,3 +4,5 @@ configMapGenerator:
   - python/main.py
 resources:
   - deployment/deployment.yaml
+generatorOptions:
+  disableNameSuffixHash: true
