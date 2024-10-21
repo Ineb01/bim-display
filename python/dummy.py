@@ -19,7 +19,7 @@ def dummy_bitmap():
                 booleans.append(True)
             else:
                 booleans.append(False)
-    for i in range(0, int((len(booleans)+8)/8)):
+    for i in range(0, int((len(booleans))/8)):
         bytess.append(sum(map(lambda x: x[1] << x[0], enumerate(booleans[i*8:i*8+7]))))
     return send_file(
                      io.BytesIO(bytess),
