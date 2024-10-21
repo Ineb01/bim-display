@@ -9,7 +9,7 @@ def dummy_local():
     return dummy()
 
 @app.route('/dummybitmap')
-def dummy_bitmap_local()
+def dummy_bitmap_local():
     return dummy_bitmap()
 
 if __name__ == '__main__':
