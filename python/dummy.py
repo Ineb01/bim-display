@@ -23,6 +23,5 @@ def dummy_bitmap():
         bytess.append(sum(map(lambda x: x[1] << x[0], enumerate(booleans[i*8:i*8+7]))))
     return send_file(
                      io.BytesIO(bytess),
-                     attachment_filename='test.bmp',
                      mimetype='image/bitmap'
                )
